@@ -10,10 +10,15 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class Routes {
 
-    @RequestMapping(value = {"/"}, method = RequestMethod.GET)
+    @RequestMapping(value = "/", method = RequestMethod.GET)
     public String  home(Model model) {
         model.addAttribute("formAccount", new FormAccount());
         return "index";
+    }
+
+    @RequestMapping(value = "/test", method = RequestMethod.GET)
+    public String test() {
+        return "test";
     }
 
     @RequestMapping(value = "/", method = RequestMethod.POST)
