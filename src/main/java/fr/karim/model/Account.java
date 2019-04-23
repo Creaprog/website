@@ -1,11 +1,9 @@
 package fr.karim.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+@Table(name="Accounts")
 public class Account {
 
     @Id
@@ -15,6 +13,7 @@ public class Account {
     private String prenom;
     private String email;
     private String tel;
+    @Column(name="type_de_projet")
     private String typeProject;
     private String description;
 
